@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class DashboardComponent {
 	
-	loadState="loading";
+	loadState = "loading";
 
 	onUserClick(event){
 		this.loadState='Finished';
