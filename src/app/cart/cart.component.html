@@ -1,3 +1,10 @@
 <h1>Motherfucking cart component</h1>
 <input [(ngModel)]="newItem">
-<button (click)="onAddItem()">Add Item</button>
+<button (click)="onAddItem()" [ngClass]="{'btn-primary': newItem !== '', 'btn-default': newItem === ''}">Add Item</button>
+
+<p *ngIf="newItem === ''">Please enter a value!</p>
+<hr>
+
+<ul>
+	<li *ngFor="let item of items; let i =index" [ngStyle]="{ backgroundColor: i % 2 === 0 ? 'purple' : 'blue' }">{{ item }}</li>
+</ul>
